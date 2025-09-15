@@ -1,0 +1,75 @@
+<div style="background-color: #fff5f5; padding:20px; max-width: 800px; border-radius: 10px;">
+    <h3 style="color: blue;">User Registration Form</h3>
+
+    <form style="color: blue">
+        <table style="width: 100%; border-spacing: 10px; position: relative;">
+            <tr>
+                <td><label for="firstname-input"><strong>First Name: </strong></label></td>
+                <td><input type="firstname" id="firstname-input" placeholder="Enter your first name"
+                            style="width: 70%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lastname-input"><strong>Last Name:</strong></label></td>
+                <td><input type="lastname" id="lastname-input" placeholder="Enter your last name"
+                            style="padding: 8px; width: 70%; border: 1px solid #ddd; border-radius: 4px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email-input"><strong>Email:</strong></label></td>
+                <td><input type="email" id="email-input" placeholder="user@example.com"
+                            style="padding: 8px; width: 70%; border: 1px solid #ddd; border-radius: 4px;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password-input"><strong>Password:</strong></label></td>
+                <td><input type="password" id="password-input" min="5" max="10" placeholder="Enter password"
+                            style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 70%;"></td>
+            </tr>
+
+            <tr>
+                <td><label for="number-input"><strong>Age:</strong></label></td>
+                <td><input type="number" id="number-input" min="1" max="100" placeholder="18 and above"
+                            style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 70%;"></td>
+            </tr>
+        </table>
+
+        <fieldset style="border: 2px solid black; border-radius: 6px; padding: 4px; margin-bottom: 10px;">
+            <legend style="font-weight: bold; color: black">Gender (choose as applicable)</legend>
+                <div>
+                    <p><label><input type="radio" name="gender" value="female">Female</label></p>
+                    <p><label><input type="radio" name="gender" value="male">Male</label></p>
+                    <p><label><input type="radio" name="gender" value="others">Others</label></p>
+                </div>
+        </fieldset>
+
+        <fieldset style="border: 2px solid black; border-radius: 6px; padding: 4px; margin-bottom: 10px;">
+            <legend style="font-weight: bold; color: black;">Interest (Choose as applicable)</legend>
+
+                <div>
+                    <p><label><input type="checkbox" name="interest" value="reading">Reading</label></p>
+                    <p><label><input type="checkbox" name="interest" value="Music">Music</label></p>
+                    <p><label><input type="checkbox" name="interest" value="sport">Sport</label></p>
+                    <p><label><input type="checkbox" name="interest" value="go for a ride">Go for a ride</label></p>
+                </div>
+
+        </fieldset>
+
+        <div style="margin-bottom: 15px">
+            <label for="country" style="display: block; margin-bottom: 5px; font-weight: bold;">Country</label>
+            <select id="country" name="country" style="width: 70%; padding: 8px; border: 2px solid #ddd; border-radius: 4px;">
+                <option value="">Select your country</option>
+                <option value="egy">Egypt</option>
+                <option value="nig">Nigeria</option>
+                <option value="ken">Kenya</option>
+                <option value="eut">Euthopia</option>
+            </select>
+        </div>
+        
+        <button type="submit" style="background-color: white; color: blue; padding: 10px 20px; border: none; border-radius: 8px; cursor:pointer;">
+            Submit Survey
+        </button>
+
+    </form>
+
+</div>
