@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: aliceblue;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            color: white;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .buttons button {
+            background-color: rgb(63, 63, 158);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        #me-content {
+            color: blue;
+        }
+        #tel-content {
+            color: blue;
+        }
+        #skills-content {
+            color: blue;
+        }
+        .buttons.hover {
+            color: rgb(226, 226, 248);
+        }
+
+        
+    </style>
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button id="about-btn">About Me</button>
+            <button id="contacts-btn">My Contacts</button>
+            <button id="my-skills-btn">My skills</button>
+        </div>
+
+        <div>
+            <p id="me-content">About Me: My name is Olamide<br>I am currently enrolled in an AI fellowship</p>
+            <p id="tel-content">Telephone: +2345678<br>Email: user@example.com</p>
+            <p id="skills-content">My skills: Python<br>Javascript<br>HTML</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
