@@ -1,0 +1,95 @@
+
+<style>
+    .container {
+        background-color: rgba(232, 240, 239, 0.603);
+        padding: 20px;
+        color: rgb(110, 24, 190);
+        border: 2px solid;
+        border-radius: 8px;
+    }
+
+    .demo-button {
+        margin-bottom: 20px;
+        background-color: blueviolet;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 4px;
+        margin-left: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .output {
+        padding: 12px;
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-family: 'Courier New', monospace;
+    }
+    .demo-button:hover {
+        background-color: rgb(90, 27, 146);
+    }
+</style>
+
+
+
+
+<div class="container">
+    <h3>My personal Information display</h3>
+
+    <button class="demo-button" onclick="displayInformation()">My info</button>
+    <button class="demo-button" onclick="formattedDisplay()">Custom look</button>
+
+    <div id="exercise1-output" class="output">Click to show my personal Information...</div>
+</div>
+
+
+<script>
+   
+function displayInformation() {
+    const firstName = 'Olamide';
+    const lastName = 'Akinleye';
+    const age = 16;
+    const isStudent = true;
+    const favoriteColor = 'blue';
+
+
+    const olderAge = age + 5;
+
+    const output = `
+        <strong>My Personal Information:</strong><br><br>
+        My name is ${firstName} ${lastName}<br><br>
+        I am currently ${age} years old and in the next five years I will be ${olderAge}<br><br>
+        I am currently a student at an AI fellowship and my favorite color is ${favoriteColor}<br><br>
+
+    `
+
+     document.getElementById('exercise1-output').innerHTML = output;
+    
+}
+
+
+function formattedDisplay() {
+     const firstName = 'Olamide';
+    const lastName = 'Akinleye';
+    const age = 16;
+    const isStudent = true;
+    const favoriteColor = 'blue';
+
+
+    const olderAge = age + 5;
+
+    const output = `
+        <strong>My Personal Information:</strong><br><br>
+        Fullname:  ${firstName} ${lastName}<br><br>
+        Age: ${age}<br><br>
+        Student-status: ${isStudent}<br><br>
+        Favorite-color: ${favoriteColor}<br><br>
+        Age-in-five-years: ${olderAge}
+    `
+
+     document.getElementById('exercise1-output').innerHTML = output;
+
+}
+</script>
