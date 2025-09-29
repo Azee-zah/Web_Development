@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movie = {
+            title : "Marina",
+            director : "Xyle Benson",
+            releaseYear : 2020,
+            rating : 8.5,
+
+            getSummary() {
+                return `The movie: "${movie.title}(${movie.releaseYear}), directed by ${movie.director} is rated ${movie.rating}"`
+            }
+        }
+
+        movie.isWatched = true
+
+       console.log(movie)
+       console.log(movie.getSummary())
+
+
+
+       let collections = [
+        {
+            title : "Merlin",
+            director : "Jack Yule",
+            releaseYear : 2019,
+            rating : 9.5
+        },
+        {
+            title : "Titanic",
+            director : "Okoro Kylian",
+            releaseYear : 2023,
+            rating : 7.5
+        },
+        {
+            title : "Yemoja",
+            director : "Bruce Chan",
+            releaseYear : 2024,
+            rating : 8.0
+        }
+       ]
+
+       function getRatings(movies) {
+        let greaterRatings = []
+        for (let m of movies) {
+            if (m.rating >= 8) {
+                greaterRatings.push(m.title)
+            }
+            console.log("Movies with ratings of 8 and above", greaterRatings)
+            
+        }
+    }
+
+    getRatings(collections)
+    </script>
+</body>
+</html>

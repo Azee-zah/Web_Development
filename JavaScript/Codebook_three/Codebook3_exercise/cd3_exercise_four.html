@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd3 exercise four</title>
+
+    <style>
+        button {
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="inform()">
+        Student info
+    </button>
+
+
+
+
+
+    <script>
+        function inform() {
+            let studentNames = ["Stella", "Stephen", "Shalom", "Stephanie", "Sydney"];
+
+        let studentGrades = [78, 89, 70, 85, 65];
+
+      
+
+        function averageGrade(studentGrades) {
+            let total = 0;
+            for (let s = 0; s < studentGrades.length; s++) {
+                total += studentGrades[s]
+                let average = total / studentGrades.length
+
+                console.log (`Average: ${average}`)
+
+            }
+        }
+
+        function highestGrade(scores) {
+           let highest = scores[0];
+           let topStudent = studentNames[0]
+           for (let s = 1; s < scores.length; s++) {
+            if (scores[s] > highest) {
+                highest = scores[s];
+                topStudent = studentNames[s]
+            }
+           }
+        console.log(`Top Student: ${topStudent} => ${highest}`)
+        }
+        
+
+        function lowestgrade() {
+            let lowest = studentGrades[0];
+            let bottomStudent = studentNames[0];
+           for (let s = 1; s < studentGrades.length; s++) {
+            if (studentGrades[s] < lowest) {
+                lowest = studentGrades[s];
+                bottomStudent = studentNames[s]
+            }
+           }
+           console.log(`Bottom Student: ${bottomStudent} => ${lowest}`)
+
+        // let BottomScore = Math.min(...studentGrades);
+    
+        // console.log(`Bottomscore: ${TopScore}`)
+        }
+       
+
+
+        function GradeCategorizer() {
+
+            for (s of studentGrades) {
+                if (s === 100) {
+                    console.log(`Score ${s} Outstanding Performance. Grade: A+`)
+                } else if (s > 100) {
+                    console.log(`Score ${s}: Grade cannot be greater than 100`)
+
+                }else if (s >= 90) {
+                    console.log(`Score ${s}: Grade A`)
+                } else if (s >= 80) {
+                    console.log(`Score ${s}: Grade: B`)
+                } else if (s >= 70) {
+                    console.log(`Score ${s}: Grade: C`)
+                } else if (s >= 60) {
+                    console.log(`Score ${s}: Grade:D`)
+                } else {
+                    console.log(`Score ${s}: Grade: F`)
+                }
+            }
+        }
+       
+
+
+
+        function reportGenerator() {
+            for (let s = 1; s < studentGrades.length; s++) {
+                console.log(`${studentNames[s]} => Grade ${studentGrades[s]}`)
+            }
+        }
+
+        averageGrade(studentGrades)
+        console.log("")
+        highestGrade(studentGrades)
+        console.log("")
+        lowestgrade(studentGrades)
+        console.log("")
+        GradeCategorizer(studentGrades)
+        console.log('')
+        reportGenerator(studentGrades)
+        console.log("")
+
+        studentGrades.sort((a, b) => b - a);
+        console.log(`Grades in descending Order: ${studentGrades}`)
+        }
+
+       
+    </script>
+</body>
+</html>

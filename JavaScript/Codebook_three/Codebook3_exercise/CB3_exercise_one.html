@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let shoppingList = ["shampoo", "perfume", "gel", "hair cream", "conditioner"];
+    console.log("Original:", shoppingList)
+    shoppingList.push("Comb");
+    console.log("After Adding:", shoppingList)
+    let removedItem = shoppingList.shift();
+    console.log("Removed Item", removedItem);
+    console.log("Updated List", shoppingList)
+     
+    let totalItems = shoppingList.length;
+    console.log("Total Items:", totalItems);
+
+
+    console.log("")
+
+    for (let l = 0; l < shoppingList.length; l++) {
+        console.log(`List ${l + 1}: ${shoppingList[l]}`)
+    }
+
+    // CHALLENGE
+
+
+    function formatList(list) {
+        // let list = []
+        for (let i = 0; i < list.length; i++) {
+             console.log(`${i + 1}: ${list[i]}`)
+        }
+       
+    }
+
+
+    let music = ["adura", "glory", "awesome"]
+    formatList(music)
+
+   </script> 
+
+
+</body>
+</html>

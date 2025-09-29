@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd4 exercise two</title>
+
+    <style>
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(152, 164, 202);
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="accessItem()">Check Item</button>
+
+
+    <script>
+        function accessItem() {
+            let cartItem = {
+            name : "Perfume",
+            price : 3000,
+            quantity : 2,
+
+            getTotal() {
+                let total = 0
+                let amount = this.price * this.quantity;
+                return `Total: #${total += amount}`
+                
+            }
+        }
+            console.log(cartItem)
+            console.log(cartItem.getTotal())
+        }
+       
+        console.log('')
+
+        let cart = [
+            {
+                name: "Body cream",
+                price: 7000,
+                quantity: 1,
+            },
+            {
+                name : "Moisturizer",
+                price: 2500,
+                quantity : 2,
+            },
+            {
+                name : "Shampoo",
+                price: 4000,
+                quantity: 3,
+            }
+        ]
+
+        // function getCartTotal() {
+        //    for (let c = 0; c < cart.length; c++) {
+        //     let total = 0;
+        //     let amount = this.price * this.quantity;
+        //     return `Total: ${total += amount}`
+        //    }
+           
+        // }
+
+        console.log(cart)
+        // console.log(getCartTotal())
+    </script>
+</body>
+</html>

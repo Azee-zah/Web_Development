@@ -72,9 +72,6 @@ function weatherAdvice () {
 }
 
 function atm(balance, action, amount) {
-    // let balance = 600;
-    // let action = prompt("deposit or withdraw ")
-    // let amount = Number(prompt(`Enter ${action} amount`));
 
     if (action === "withdraw") {
         if (amount > 500) {
@@ -102,10 +99,10 @@ function atm(balance, action, amount) {
 
 
 
-function personalAssistant() {
-    let weather = prompt("How is the weather like? sunny, rainy or cloudy");
-    let dayType = prompt("Is it workday, weekend or holiday ?");
-    let time = prompt("what hour are you in morning, afternoon, evening or night");
+function personalAssistant(time, weather, dayType) {
+    // let weather = prompt("How is the weather like? sunny, rainy or cloudy");
+    // let dayType = prompt("Is it workday, weekend or holiday ?");
+    // let time = prompt("what hour are you in morning, afternoon, evening or night");
 
     if (time === "morning" && weather === "sunny" && dayType === "workday") {
         console.log("Do have a great time at work, Your scheduled meetings are intact")

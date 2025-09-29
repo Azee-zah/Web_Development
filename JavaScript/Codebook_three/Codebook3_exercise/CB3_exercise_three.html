@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movies = ["Krsih", "Marvel", "Pennisula", "Marina"]
+        let ratings = [5.0, 4.0, 5.5, 3.0]
+       
+                     
+            // FUNCTION TO ADD MOVIES
+        function addMovie(movie, rating) {
+           
+            movies.push(movie);
+            ratings.push(rating);
+            for (let i = 0; i < movies.length; i++) {
+                console.log(`${movies[i]}: ${ratings[i]}`)
+            }
+        }
+
+       addMovie("Aries", 3.7)
+       addMovie("Libra", 6.0)
+
+       console.log("")
+
+       
+            // FUNCTION TO CHECK AVERAGE RATINGS
+       function getAverageRatings() {
+        let total = 0
+        for (let r of ratings){
+            total += r;
+        }
+        let average = total / ratings.length;
+        for (let i = 0; i < movies.length; i++) {
+                console.log(`${movies[i]}: ${ratings[i]}`)
+            }
+        console.log("The ratings:", ratings)
+        console.log ("Average ratings:", average)
+       }
+       getAverageRatings(ratings)
+
+
+
+            // FUNCTION TO CHECK TOP MOVIE
+       function getTopMovie() {
+        let highest = ratings[0];
+        let topMovie = movies[0];
+
+        for (let i = 0; i < ratings.length; i++) {
+            if (ratings[i] > highest){
+                highest = ratings[i]
+                topMovie = movies[i]
+            }
+
+        }
+        console.log(`Movies with highest ratings: ${topMovie}: ${highest}`)
+       }
+       getTopMovie(movies)
+
+
+        // Summary of movie and their rating
+       for (let i = 0; i < movies.length; i++) {
+         console.log(`Movie: Ratings\n ${movies[i]}: ${ratings[i]}`)
+       }
+
+       // To sort Movies from highest to lowest
+       console.log(movies.sort(), ratings.sort((a,b) => a - b))
+       
+       
+       
+    </script>
+</body>
+</html>

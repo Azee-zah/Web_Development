@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd5 exercise three</title>
+
+    <style>
+        .con {
+            padding: 20px;
+            background-color: rgb(171, 219, 190);
+            text-align: center;
+            color: green;
+        }
+        .con label {
+            margin-right: 10px;
+            color: green;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .con input {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .pass {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .con button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .con button:hover {
+            background-color: rgb(101, 216, 101);
+        }
+
+        #output {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con" onsubmit="handleSubmit(event)">
+        <h2>Login Page</h2>
+        <label for="username">Username</label>
+        <input type="text" id="userInput" required placeholder="Enter your username"><br>
+        
+        <div class="pass">
+                <label for="password">Password</label>
+                <input type="text" id="passwordInput" required placeholder="Enter your password"><br>
+        </div>
+
+        <button onclick="submit()">Enter</button>
+    </div>
+
+    <div id="output"></div>
+
+
+    <script src="./cd5_exercise_three.js"></script>
+</body>
+</html>

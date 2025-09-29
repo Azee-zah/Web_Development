@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let grades = [87, 50, 89, 67, 76, 70, 92, 55, 44];
+
+
+                // FUNCTION TO GET AVERAGE
+        function getAverage(grades) {
+            let total = 0;
+            console.log("Grades", grades)
+            for (let g of grades) {
+                console.log("Adding:", g)
+                total += g;
+            }
+            let average = total / grades.length;
+            console.log(`Total: ${total}`)
+            console.log(`Average of grades ${average}`)
+        }
+
+
+        let scores = [20, 25, 40, 50]
+        console.log(scores)
+        getAverage(scores)
+
+        getAverage(grades)
+
+
+        console.log("")
+
+                // FUNCTION TO GET HIGHEST
+        function getHighest(grades) {
+            console.log("Grades:", grades);
+            let highest = grades[0];
+            for (let grade of grades) {
+                if (grade > highest) {
+                    highest = grade;
+                }
+            }
+            console.log(`Highest Grades: ${highest}`)
+        }
+
+        
+        let num = [90, 80, 65, 54, 20]
+        getHighest(num)
+
+        console.log("")
+
+
+            // FUNCTION TO GET LOWEST
+        function getLowest(grades) {
+            lowest = grades[0];
+            for (let grade of grades) {
+                if (grade < lowest) {
+                    lowest = grade
+                }
+            }console.log (`Lowest Grade ${lowest}`)
+
+        }
+
+        getLowest(num)
+
+        console.log("")
+
+        //  FUNCTION TO GET PASSED
+        function getPassRate(grades) {
+            passed = 0;
+            for (let g = 0; g < grades.length; g++) {
+                if (grades[g] >= 50){
+                    passed++
+                }
+            } console.log("No of Passed", passed)
+
+            let percentagePassed = (passed / grades.length) * 100;
+            console.log(`Percentage Passed: ${percentagePassed}%`)
+          
+        }
+
+        getPassRate(num)
+        getPassRate(grades)
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Counting from 1 to 5");
+        for (let i = 1; i<=5; i++) {
+            console.log("Count:", i)
+        }
+        console.log("");
+
+        console.log("A countdown from 5-1")
+        for (let i = 5; i>=1; i--) {
+            console.log("Countdown:", i)
+        }
+        console.log("");
+
+        console.log("Count in evens 2-10")
+        for (let a = 2; a <=10; a += 2) {
+            console.log("In evens:", a)
+        }
+
+        console.log("");
+        let colors = ["red", "blue", "green", "purple", "pink"]
+        console.log("Colors in the array");
+        for (let c = 0; c < colors.length; c++) {
+            console.log(`Color ${c + 1}: ${colors[c]}`)
+        }
+
+        console.log("");
+
+        let structures = ["pacemaker", "aorta", "pericardium", "myocardium"];
+        for (let s of structures) {
+            console.log("I have", s)
+        }
+
+        console.log("For traditional for-loop");
+        for (let s = 0; s < structures.length; s++) {
+            console.log("I have", structures[s])
+        }
+        console.log("");
+
+        // Processing Numbers using for ... of
+        let scores = [85, 92, 78, 96, 88];
+        let total = 0;
+
+        console.log("calculating the Average score:")
+        for (let s of scores) {
+            console.log("Adding Score:", s);
+            total += s
+        }
+
+        let average = total / scores.length;
+        console.log(`Total: ${total}, Average: ${average.toFixed(1)}`)
+
+        console.log("");
+        let temperatures = [68, 72, 85, 90, 75, 82, 88]
+        let hotDays = 0;
+        let coldDays = 0;
+
+        console.log("Analyzing temperatures:");
+        for (let t of temperatures) {
+            if (t >= 85) {
+                hotDays++;
+                console.log(`${t}F- Hot day!`)
+            } else if (t < 70) {
+                coldDays++;
+                console.log(`${t}F - Cold day!`)
+            } else {
+                console.log(`${t}F - Nice day!`)
+            }
+        }
+        console.log(`Summary: ${hotDays} hot days, ${coldDays} cold days`)
+        console.log("");
+
+        let numbers = [1, 2, 3, 4, 5];
+        let doubled = [];
+
+        console.log("Doubling the items in the array")
+        for (let n of numbers) {
+            let doubledValue = n * 2;
+            doubled.push(doubledValue)
+            console.log(`${n} x 2 : ${doubledValue}`)
+        }
+
+        console.log("Originals:", numbers);
+        console.log("Doubled:", doubled);
+
+
+        console.log("");
+
+        // WHILE LOOP
+
+        console.log("Basic while loop - counting to 5:")
+        let count = 1;
+        while (count <= 5) {
+            console.log("Count is:", count);
+            count++;
+        }
+
+        console.log("");
+
+        let numericals = [2, 4, 6, 8, 3, 10, 12];
+        let n = 0;
+        let foundOdd = false;
+
+        while (n < numericals.length && !foundOdd) {
+            console.log(`Checking: ${numericals[n]}....`);
+
+            if (numericals[n] % 2 === 1) {
+                console.log(`Found odd number: ${numericals[n]}`);
+                foundOdd = true;
+            }else {
+                
+            }
+            
+        }
+         
+
+
+
+    
+
+
+    </script>
+</body>
+</html>

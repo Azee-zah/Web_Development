@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // ARRAYS
+        let fruits = ["apple", "banana", "cherry"];
+        let numbers = [10, 25, 30, 45, 50];
+        let boolean = [true, false, false, true];
+        let mixedArray = ["John", 23, false, "graduate"]
+
+        let emptyArray = [];
+
+        
+        console.log("Fruit array:", fruits)
+        console.log("Number array:", numbers)
+        console.log("Mixed array:", mixedArray)
+        console.log("Empty array:", emptyArray)
+
+        console.log("Fruits length:", fruits.length)
+        console.log("Mixed length:", mixedArray.length)
+        console.log("Empty length:", emptyArray.length)
+
+        console.log("")
+        console.log("Second Fruit:", fruits[1])
+        console.log("Last Fruit:", fruits[fruits.length -1])
+
+        console.log("")
+        console.log("First Number:", numbers[0]);
+        console.log("Last Number:", numbers[numbers.length -1]);
+        console.log("Last Number:", numbers[5-1]);
+
+        console.log("Unexisting Index:", fruits[7])
+
+        // Modifying Arrays
+        console.log("")
+        let colors = ["red", "green", "blue"];
+        console.log("Original colors:", colors);
+        colors[0] = "purple"
+        colors[2] = "yellow"
+        console.log("New colors:", colors)
+
+        console.log("");
+
+        let shoppingList = ["Milk", "bread", "Milo"];
+        console.log("Original list:", shoppingList);
+
+        shoppingList.push("eggs")
+        shoppingList.push("sardines", "Oil", "butter")
+        console.log("Updated List:", shoppingList)
+
+        let removedItem = shoppingList.pop();
+        console.log("Removed Item:", removedItem)
+        console.log("New List:", shoppingList)
+
+        shoppingList.unshift("apple")
+        console.log("Newer list:", shoppingList);
+
+        let firstItem = shoppingList.shift()
+        console.log("Removed:", firstItem)
+        console.log("Latest list:", shoppingList)
+
+        let students = ["Alice", "Bob", "Charlie", "Diana"]
+        console.log("Students:", students);
+
+        console.log("Bob's present:", students.includes("Bob"))
+        console.log("Charlies' position:", students.indexOf("Charlie"))
+
+        console.log("");
+
+        let numerals = [1, 2, 3, 4, 5];
+        let names = ["Ola", "Ore", "Simeon", "Deji", "Favour"]
+        console.log("Original Numeral:", numerals);
+        console.log("Original Names:", names);
+        console.log("");
+
+        let firstThree = numerals.slice(0, 3);
+        let lastTwo = numerals.slice(-2);
+
+        console.log("First three numbers:", firstThree);
+        console.log("Last two numbers:", lastTwo);
+        console.log("originals:", numerals)
+
+        console.log("");
+        let veggies = ["apple", "tomatoes", "grape", "onions", "pepper"]
+        console.log("Original Veggies:", veggies);
+
+        let removed = veggies.splice(1, 2);
+        console.log("Removed Items:", removed);
+        console.log("After:", veggies)
+
+        veggies.splice(1, 0, "mango", "pineapple");
+        console.log("After adding:", veggies);
+
+        console.log("");
+
+        let words = ["Hello", "from", "JavaScript"];
+        let sentence = words.join(" ");
+        let csv = words.join(",")
+
+        console.log("Words array:", words);
+        console.log("As sentence:", sentence);
+        console.log("As csv:", csv);
+        
+        console.log("");
+
+        let message = "apple,banana,orange";
+        let fruitArray = message.split(",");
+        console.log("String:", message);
+        console.log("Split into array:", fruitArray);
+
+        console.log("");
+        let fullName = "Olamide,Azeezat,Akinleye";
+        let identity = fullName.split(",");
+        console.log("Worded:", fullName);
+        console.log("Array Name:", identity);
+
+        console.log("");
+
+        let countDown = [1, 2, 3, 4, 5, 6];
+        console.log("Original countdown:", countDown);
+        countDown.reverse();
+        console.log("Reversed:", countDown)
+
+    </script>
+</body>
+</html>

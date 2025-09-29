@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Counting even numbers 2-10")
+        for (e = 2; e <= 10; e += 2) {
+            console.log(`even numbers: ${e}`)
+        }
+
+        let scores = [100, 12, 45, 89, 90, 67]
+        let total = 0;
+
+        for (let s of scores) {
+            total += s;
+        }
+        console.log(`Sum total of (${scores.join("+")}) => ${total}`)
+
+        let average = total / scores.length
+        console.log(`Average of ${scores. join(" ")}: ${average.toFixed(1)}`)
+
+       console.log("")
+
+       let temperaturess = [68, 56, 82, 75, 88, 72]
+       let hotDayss = 0;
+       let coldDayss = 0;
+       let niceDayss = 0;
+
+       console.log(temperaturess)
+
+       for (t of temperaturess) {
+        if (t >= 85) {
+            hotDayss++;
+            console.log(`${t}F - Hot Day!`)
+        } else if (t < 70) {
+            coldDayss++;
+            console.log(`${t}F - Cold Day`)
+        } else {
+            niceDayss++              
+            console.log(`${t}F - Nice day!`)
+        }
+       }
+       console.log(`Summary: ${hotDayss} hot days, ${coldDayss} cold days, ${niceDayss} nice days`)
+
+       console.log("")
+
+       let numbers = [2, 4, 6, 8, 3, 10, 12];
+       let n = 0;
+       let foundOdd = false;
+
+       while (n < numbers.length && !foundOdd) {
+        console.log(numbers[n])
+       }
+
+
+
+
+
+    </script>
+</body>
+</html>

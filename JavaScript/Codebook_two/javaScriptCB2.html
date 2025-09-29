@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codealong</title>
+</head>
+<body>
+    
+
+    <script>
+      function sayHello() {
+        console.log("Hello from my first function")
+      }
+
+      sayHello();
+      sayHello();
+      console.log("");
+
+      function showCurrentTime() {
+        let now = new Date();
+        console.log(`Current Time: ${now.toLocaleTimeString()}`)
+      }
+
+      showCurrentTime()
+
+    //   Functions with parameters
+
+    function greetPerson(name) {
+        console.log(`Hello, ${name}! Welcome to JavaScript `)
+    }
+    greetPerson("Olamide");
+    greetPerson("Bob");
+    greetPerson(name)
+    greetPerson()
+    greetPerson("")
+    
+    function introduce(firstName, lastName, age) {
+        console.log(`Hi! I am ${firstName} ${lastName} and I'm ${age} years old.`)
+    }
+
+    introduce("Olamide", "Akinleye", 20);
+    introduce("Adedeji", "Oni", 21);
+    introduce("Abolore", "Sanni", 22);
+
+    function greetWithDefault(name = "Friend") {
+        console.log(`Hello, ${name}!`)
+    }
+    greetWithDefault("Olamide");
+    greetWithDefault()
+
+
+    // Function with return values
+
+    function addNumbers(num1, num2) {
+        let result = num1 + num2
+        return result
+    }
+
+    let sum = addNumbers(5, 3)
+    console.log(`Sum: ${sum}`)
+
+    console.log("10 + 7 =", addNumbers(10, 7))
+
+
+    function createFullName(first, last) {
+        return `${first} ${last}`.trim()
+    }
+
+    let fullName = createFullName("Olamide", "Akinleye")
+    console.log(`Full Name: ${fullName}`)
+    
+
+    // Functions that returns boolean
+
+    function isAdult(age) {
+        return age >= 18;
+    }
+    console.log("Is 16 an adult", isAdult(16));
+    console.log("Is 21 an adult", isAdult(21));
+
+    let userAge = 20;
+    if (isAdult(userAge)) {
+        console.log("User can vote");
+    } else {
+        console.log("User cannot vote")
+    }
+
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function divide(a, b) {
+        if (b === 0) {
+            return "Cannot divide by zero!";
+        } 
+        return a / b; 
+    }
+
+
+    function calculateArea(length, width) {
+        return length * width;
+    }
+
+    console.log("Multiply 6 x 4=", multiply(6, 4));
+    console.log("Divide 15 by 3=", divide(15, 3));
+    console.log("Divide 15 by 0=", divide(15, 0));
+    console.log("Area of a 5x3 room=", calculateArea(5,3), "square units")
+    </script>
+</body>
+</html>
