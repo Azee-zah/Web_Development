@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd6 exercise one</title>
+    <style>
+        #myForm {
+            text-align: center;
+        }
+        #myNotes {
+            padding: 30px;
+            border-radius: 6px;
+            width: 40%;
+            height: 40%;
+            border: 2px solid rgb(118, 118, 163);
+            background-color: aliceblue;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+        }
+
+        label {
+            color: rgb(66, 66, 209);
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 8px;
+            background-color: rgb(66, 66, 209);
+            border: none;
+            border-radius: 6px;
+            margin-right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(29, 29, 90);
+
+        }
+
+        p {
+            background-color: white;
+            font-size: large;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <form id="myForm">
+        <label for="text">Notes</label> <br>
+        <textarea name="notes" id="myNotes" placeholder="Enter your notes here"></textarea><br>
+        <button id="saveBtn" onclick="saveNote()">Save Note</button>
+        <button type="button" id="loadBtn" onclick="loadNote()">Load Note</button>
+    </form>
+
+   <div>
+     <p id="displaySection"></p>
+   </div>
+
+    
+
+
+
+
+    <script src="./cd6_exercise_one.js"></script>
+</body>
+</html>
