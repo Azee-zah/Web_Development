@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd7 exercise three</title>
+</head>
+<body>
+    <script>
+        class Vehicle { 
+            constructor(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+
+            getInfo() {
+                return `This ${this.model} is a ${this.brand} brand of year ${this.year}`
+            }
+
+            isOld() {
+                return this.year === true? `${this.model} is old` : `${this.model} is not old`
+            }
+        }
+
+
+        class Car extends Vehicle {
+            constructor(brand, model, year, fuelType) {
+                super(brand, model, year);
+                this.fuelType = fuelType
+            }
+
+            getInfo() {
+                return `This ${this.model} is a ${this.brand} brand of year ${this.year} and it uses ${this.fuelType} fuel type`
+            }
+        }
+
+
+        let Vehicle1 = new Car("Toyota", "Camry", 2023, "CNG")
+        let Vehicle2 = new Car("Toyota", "Corolla", 2023, "LNG")
+        let Vehicle3 = new Car("Lexus", "RX350", 2023, "LNG")
+
+        console.log(Vehicle1.getInfo())
+        console.log(Vehicle1.isOld())
+
+    </script>
+
+</body>
+</html>
