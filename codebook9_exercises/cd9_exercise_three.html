@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd9 exercise three</title>
+</head>
+<body>
+    <script>
+        function menuItems() {
+            return new Promise((resolve) => {
+                setTimeout(function(){
+                    resolve(["Coffee", "Cake", "Juice"])
+                }, 2000)
+            })
+        }
+
+        async function prepareOrder() {
+            console.log("Preparing order...")
+
+            let items = await menuItems()
+
+            for (item of items) {
+                setTimeout(function() {
+                    console.log("Order", item, "is ready")
+                }, 1000)
+            }
+           
+        }
+
+        prepareOrder()
+    </script>
+</body>
+</html>

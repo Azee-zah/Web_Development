@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd9 exercise two</title>
+</head>
+<body>
+    <script>
+        function deliverOrder(order){
+            return new Promise(function(resolve, reject){
+                console.log("Your delivery status...")
+
+                let order = Math.random() < 0.5 
+
+                if (order) {
+                    resolve("Delivered ✅")
+                } else {
+                    reject("Delivery failed❌")
+                }
+            })
+        }
+
+        deliverOrder()
+            .then(function(order){
+                console.log("The Message:", order)
+            })
+            .catch(function(error){
+                console.log("Eror:", error)
+            })
+    </script>
+</body>
+</html>

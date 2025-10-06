@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cd9 exercise one</title>
+</head>
+<body>
+    <script>
+        function tellJoke() {
+            return new Promise(function(resolve, reject){
+                console.log("Got a joke to tell");
+
+                setTimeout(() => {
+                    let Jokes = "The pupils are a part of the body that dies late, cause they dilate😂"
+                    resolve(Jokes)
+                }, 3000)
+            })
+        }
+
+
+        tellJoke()
+            .then(function(Jokes){
+                console.log("The Joke:", Jokes)
+            })
+            .catch(function(error){
+                console.log("An Error", error)
+            })
+
+            console.log("You will find it funny 😉")
+    </script>
+</body>
+</html>
