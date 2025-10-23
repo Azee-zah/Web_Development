@@ -1,0 +1,54 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(26, 78, 26);
+  background-repeat: no-repeat;
+
+  
+}
+
+a {
+  font-weight: 500;
+  color: #76c280;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #e7e7e1;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.card{
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-top: 50px;
+  color: green;
+  background-color: white;
+  box-shadow: 2px 2px 5px #fff;
+  border-radius: 8px;
+  
+}
+
+.tagLine {
+  font-style: italic;
+}
+
+p {
+  line-height: 20px;
+}
+
+.title {
+  font-weight: bolder;
+}

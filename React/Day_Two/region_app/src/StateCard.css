@@ -1,0 +1,32 @@
+
+.state-card {
+    padding: 20px;
+    margin: 10px;
+    color: rgb(46, 43, 43);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:'Arial Narrow', Arial, sans-serif
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.gen-con {
+    background: linear-gradient(white, green);
+    padding: 20px;
+    min-height: 1200px ;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(28, 121, 32);
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 50px;
+  
+}
