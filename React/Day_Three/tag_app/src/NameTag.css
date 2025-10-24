@@ -1,0 +1,51 @@
+.gen-con {
+    padding: 20px;
+    background-color: rgb(79, 122, 139);
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    min-height: 800px;
+    
+    
+}
+
+input {
+    margin-top: 20px;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: rgb(79, 122, 139);
+   
+}
+
+
+
+.display {
+    color: white;
+    /* background-color: rgb(99, 124, 145); */
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+button {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(51, 89, 119);
+}
+
+button:hover {
+    background-color: rgb(39, 54, 66);
+}
+h3 {
+    text-align: center;
+    color:  rgb(63, 105, 138) ;
+    font-weight: 100%;
+    font-size: 2rem;
+}
