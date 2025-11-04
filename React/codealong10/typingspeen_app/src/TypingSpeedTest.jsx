@@ -71,38 +71,38 @@ function TypingSpeedTest() {
     const wpm = timeElasped > 0 ? Math.round((wordsTyped/ timeElasped)* 60): 0;
 
     return(
-        <div className="typing-con">
-            <h1>TYping Speed Test ⌨️</h1>
-            <p>Give your typing speed a try with Nigerian Context</p>
+        <div className="typing-container">
+            <h1>⌨️ Typing Speed Test</h1>
+            <p className="subtitle">Test your typing speed with Nigerian context</p>
 
             {!started && !finished && (
-                <div className="Start-section">
+                <div className="start-section">
                     <div className="sample-text">
-                        <h3>Type this:</h3>
+                        <h3>Type this text</h3>
                         <p>{SampleText}</p>
                     </div>
-                    <button className="start-btn" onClick={Begin}>Start Test</button>
+                    <button onClick={startTest} className="start-btn">Start Test</button>
                 </div>
             )}
 
             {started && (
                 <div className="test-section">
                     <div className="timer">
-                        Time: {timeElasped}s
+                        Timer: {timeElasped}
                     </div>
 
                     <div className="sample-display">
-                        <h3>Type this: </h3>
+                        <h3>Type this:</h3>
                         <p className="sample-text-display">{SampleText}</p>
                     </div>
 
-                    <textarea 
+                    <textarea
                         ref={inputRef}
                         value={userInput}
                         onChange={handleInputChange}
-                        className="typing-area"
-                        placeholder="Start typing ..."
-                        rows='5'
+                        className="typing-input"
+                        placeholder="Start typing here..."
+                        rows="5"
                     />
 
                     <div className="stats">
@@ -112,58 +112,57 @@ function TypingSpeedTest() {
                         </div>
 
                         <div className="stat">
-                            <span className="stat-label">WPM:</span>
+                            <span className="stat-label">WPM</span>
                             <span className="stat-value">{wpm}</span>
                         </div>
 
                         <div className="stat">
-                            <span className="stat-label">Accuracy:</span>
-                            <span className="stat-value">{accuracy}</span>
+                            <span className="stat-label">Accuracy</span>
+                            <span className="stat-value">{accuracy}%</span>
+                        </div>
+                    </div>
+                    <button onClick={reset} className="reset-btn">Reset</button>
+                </div>
+            )}
+
+
+            {finished && (
+                <div className="results-section">
+                    <h2>🎉 Test Complete!</h2>
+
+                    <div className="results">
+                        <div className="result-item">
+                            <span className="result-label">Time Taken:</span>
+                            <span className="result-value">{timeElasped}</span>
                         </div>
 
-                        <button onClick={reset} className="reset-btn">
-                            Reset
-                        </button>
+                        <div className="result-item">
+                            <span className="result-label">Words Per Minute:</span>
+                            <span className="result-value">{wpm} WPM</span>
+                        </div>
+
+                        <div className="result-item">
+                            <span className="result-label">Accuracy:</span>
+                            <span className="result-value">{accuracy}</span>
+                        </div>
+
+                        <div className="result-item">
+                            <span className="result-label">Total Words:</span>
+                            <span className="result-value">{wordsTyped}</span>
+                        </div>
                     </div>
 
-                    {finished && (
-                        <div className="result-section">
-                            <h2>Test Complete ✅</h2>
+                    <div className="performance">
+                        {wpm >= 60 && <p className="excellent">Excellent</p>}
+                        {wpm >= 40 && wpm < 60 && <p className="good">Good Job!👍</p>}
+                        {wpm < 40 && <p className="practice">Keep Practicing 📚</p>}
+                    </div>
 
-                            <div className="results">
-                                <div className="result-item">
-                                    <span className="result-label">Time-taken</span>
-                                    <span className="result-value">{timeElasped} seconds</span>
-
-                                    <span className="result-label">Words Per Minutes</span>
-                                    <span className="result-value">{wpm} WPM</span>
-
-                                     <span className="result-label">Accuracy</span>
-                                    <span className="result-value">{accuracy}%</span>
-
-                                     <span className="result-label">Total words</span>
-                                    <span className="result-value">{wordsTyped}</span>
-                                </div>
-                            </div>
-
-                            <div className="performance">
-                                {wpm >= 60 && <p className="excellent">Excellent 🎉</p>}
-                                {wpm >= 40 && <p className="good">Good Job!👌</p>}
-                                {wpm < 40 && <p className="try">Keep Practicing 📚</p>}
-                            </div>
-
-                            <button onClick={reset} className="reset">Try Again</button>
-                        </div>
-                    )}
+                    <button onClick={reset} className="try-again-btn">
+                        Try Again
+                    </button>
                 </div>
             )}
         </div>
     )
-
-
-
-
-
-
-
 }
